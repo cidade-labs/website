@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   // Your production domain. Change this one line if the domain changes.
-  site: 'https://corunalabs.org',
+  site: 'https://cidadelabs.org',
 
   // Galician is the default language, served at the root (/).
   // Spanish and English live under /es/ and /en/.

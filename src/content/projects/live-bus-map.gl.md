@@ -2,7 +2,7 @@
 title: "Bus Works"
 description: "Todos os autobuses urbanos de A Coruña, en movemento en tempo real. Inspirado no mapa do metro en directo de MTA e Work&Co."
 status: "live"
-url: "https://busworks.corunalabs.org"
+url: "https://busworks.cidadelabs.org"
 source: "Compañía de Tranvías de A Coruña"
 order: 1
 lang: "gl"

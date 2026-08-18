@@ -10,7 +10,7 @@ const t = useTranslations(lang);
 const projects = (await getCollection('projects', (p) => p.data.lang === lang))
   .sort((a, b) => a.data.order - b.data.order);
 ---
-<Base lang={lang} active="projects" title={`${t('projects.title')} · Coruña Labs`} description={t('projects.lede')}>
+<Base lang={lang} active="projects" title={`${t('projects.title')} · Cidade Labs`} description={t('projects.lede')}>
   <section class="section">
     <div class="wrap">
       <p class="section-label">{t('projects.title')}</p>

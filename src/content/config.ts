@@ -15,7 +15,7 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     pubDate: z.date(),
-    author: z.string().default('Coruña Labs'),
+    author: z.string().default('Cidade Labs'),
     lang: z.enum(['gl', 'es', 'en']).default('en'),
     draft: z.boolean().default(false),
   }),

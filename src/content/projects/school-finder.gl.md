@@ -2,7 +2,7 @@
 title: "Zonas Escolares"
 description: "Escribe un enderezo e descobre exactamente en que zona escolar estás, en calquera punto de Galicia."
 status: "live"
-url: "https://escolares.corunalabs.org"
+url: "https://escolares.cidadelabs.org"
 source: "Xunta de Galicia"
 order: 3
 lang: "gl"

@@ -15,7 +15,7 @@ const posts = (await getCollection('blog', (p) => p.data.lang === lang && !p.dat
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
 ---
-<Base lang={lang} active="" title="Coruña Labs" description={t('tagline')}>
+<Base lang={lang} active="" title="Cidade Labs" description={t('tagline')}>
   <section class="hero">
     <div class="wrap">
       <h1>{t('hero.title')}</h1>

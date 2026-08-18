@@ -2,12 +2,12 @@
 title: "La desigualdad de Nueva York, pintada con los colores de A Coruña"
 description: "Una mirada breve y sin pretensiones a dos ciudades a través del índice de Gini, y una cosa realmente extraña sobre cómo Estados Unidos mide su propia desigualdad."
 pubDate: 2026-07-27
-author: "Coruña Labs"
+author: "Cidade Labs"
 lang: "es"
 draft: false
 ---
 
-Esto empezó como una curiosidad. Sin tesis, sin recomendación política. Solo una pregunta que llevaba tiempo rondándome desde que hice el [ADRH Mapper](https://adrh.corunalabs.org): **¿qué aspecto tendría el mapa de desigualdad de A Coruña si lo soltaras encima de Nueva York?**
+Esto empezó como una curiosidad. Sin tesis, sin recomendación política. Solo una pregunta que llevaba tiempo rondándome desde que hice el [ADRH Mapper](https://adrh.cidadelabs.org): **¿qué aspecto tendría el mapa de desigualdad de A Coruña si lo soltaras encima de Nueva York?**
 
 La pregunta se puede hacer por esto. El INE publica un índice de Gini para cada sección censal del país, unas 36.000, una vez al año, elaborado a partir de los datos fiscales. La Oficina del Censo de Estados Unidos publica otro para cada sección censal suya, pero lo construye a partir de una encuesta voluntaria. Las dos administraciones te dan, pues, un número.
 

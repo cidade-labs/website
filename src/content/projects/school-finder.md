@@ -2,7 +2,7 @@
 title: "Zonas Escolares"
 description: "Enter an address, see exactly which school catchment zone it falls in, anywhere across Galicia."
 status: "live"
-url: "https://escolares.corunalabs.org"
+url: "https://escolares.cidadelabs.org"
 source: "Xunta de Galicia"
 order: 3
 lang: "en"

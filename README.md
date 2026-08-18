@@ -1,6 +1,6 @@
-# Coruña Labs: website
+# Cidade Labs: website
 
-A small Astro site for the Coruña Labs civic-tech lab. Trilingual (Galician
+A small Astro site for the Cidade Labs civic-tech lab. Trilingual (Galician
 default, Spanish, English). The data tools (bus map, etc.) live in separate
 repositories and are linked from the Projects section.
 
@@ -82,7 +82,7 @@ Create `src/content/blog/my-post.md`:
 title: "My Post Title"
 description: "One-sentence summary for the card and SEO."
 pubDate: 2026-07-01
-author: "Coruña Labs"
+author: "Cidade Labs"
 lang: "en"
 draft: false          # set true to hide it
 ---
@@ -109,4 +109,4 @@ All UI strings (nav, buttons, footer) already exist in gl/es/en in
 - Galician is the default and is served at the site root.
 - The site is static HTML/CSS. The only JavaScript is Astro's View
   Transitions router, used for smoother in-page navigation.
-- Production domain is set in `astro.config.mjs` (currently corunalabs.org).
+- Production domain is set in `astro.config.mjs` (currently cidadelabs.org).

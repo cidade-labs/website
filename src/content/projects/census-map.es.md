@@ -2,7 +2,7 @@
 title: "ADRH Mapper"
 description: "La renta de los hogares en A Coruña, cartografiada barrio a barrio a partir del Atlas de Distribución de Renta de los Hogares del INE."
 status: "live"
-url: "https://adrh.corunalabs.org"
+url: "https://adrh.cidadelabs.org"
 source: "Instituto Nacional de Estadística (INE)"
 order: 2
 lang: "es"

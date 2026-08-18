@@ -2,12 +2,12 @@
 title: "New York inequality, painted with A Coruña's colors"
 description: "A short, fun look at two cities through the Gini coefficient, and one interesting thing about how America measures its own inequality."
 pubDate: 2026-07-27
-author: "Coruña Labs"
+author: "Cidade Labs"
 lang: "en"
 draft: false
 ---
 
-This idea began as a question I'd been sitting on since I built the [ADRH Mapper](https://adrh.corunalabs.org): **what would A Coruña's inequality map look like if you dropped it on New York?**
+This idea began as a question I'd been sitting on since I built the [ADRH Mapper](https://adrh.cidadelabs.org): **what would A Coruña's inequality map look like if you dropped it on New York?**
 
 The Instituto Nacional de Estadística, Spain's agency responsible for collecting statistics, demographics, and the economy, publishes a Gini coefficient for every census section in the country. However, notable is that their income data is built from tax records. The US Census Bureau, the United States' equivalent, is tasked with similar responsibilities, but builds its number from a voluntary survey instead. Both countries hand you a number, they're sourced very differently.
 
