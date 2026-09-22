@@ -5,7 +5,8 @@
 .register-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,var(--record-w));min-height:100vh}
 .register-index{padding:34px 32px 70px;max-width:840px;width:100%}
 .mast{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:33px}
-.mast h1{display:flex;align-items:center;gap:8px;font-size:1.0rem;font-weight:650;letter-spacing:.01em;line-height:1.3}
+.mast h1{font-size:1.0rem;font-weight:650;letter-spacing:.01em;line-height:1.3}
+.home-link{display:inline-flex;align-items:center;gap:8px;color:inherit;text-decoration:none}
 .index-mark{width:16px;height:16px;flex:none;display:inline-block}
 .mast .sub{font-size:0.875rem;color:var(--a-muted);margin-top:5px;max-width:430px}
 .index-meta{font:0.6875rem/1.5 var(--mono);color:var(--a-muted);margin-top:9px}
@@ -59,7 +60,7 @@ html:not(.has-js) .record-panel{padding-bottom:45px;min-height:0}
 @media(max-width:800px){.record-desk{min-height:100svh}.record-panel{min-height:calc(100svh - 61px)}}
 
 /* Accessible controls, reflow, and a direct route back from the details. */
-.return-index{display:inline-flex;align-self:flex-end;align-items:center;min-height:32px;margin-bottom:20px;font-size:0.75rem}
+.return-index{display:inline-flex;align-self:flex-start;align-items:center;min-height:32px;margin-bottom:20px;font-size:0.75rem}
 .record-fields a{display:inline-block;min-height:24px}
 .register-footer a{display:inline-block;min-height:24px}
 .register-row,.record-open{min-height:44px}
@@ -75,8 +76,3 @@ html:not(.has-js) .record-panel{padding-bottom:45px;min-height:0}
 .record-desk :focus-visible{outline-color:var(--b-ink)}
 @media(forced-colors:active){:focus-visible{outline-color:Highlight}}
 
-.return-mobile{display:none}
-@media(max-width:800px){.return-index{align-self:flex-start}.return-mobile{display:inline}.return-desktop{display:none}}
-html:not(.has-js) .return-index{align-self:flex-start}
-html:not(.has-js) .return-mobile{display:inline}
-html:not(.has-js) .return-desktop{display:none}
