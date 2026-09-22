@@ -74,3 +74,6 @@ html:not(.has-js) .record-panel{padding-bottom:45px;min-height:0}
 .record-desk :focus-visible{outline-color:var(--b-ink)}
 @media(forced-colors:active){:focus-visible{outline-color:Highlight}}
 
+/* Screenshots sit at the head of a record, cropped from the top left the way
+   the shot was taken. 3/2 keeps every record the same height above the fold. */
+.record-shot{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:top left;border:1px solid var(--b-hair);background:var(--b-bg);display:block;margin-bottom:20px}

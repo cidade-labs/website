@@ -10,6 +10,13 @@
    /es/ and /en/.
    ============================================================ */
 
+/* Which site this is. Every component reads these instead of naming the site,
+   so the components stay identical between publicworks.nyc and cidadelabs.org. */
+export const siteName = 'Cidade Labs';
+export const githubUrl = 'https://github.com/cidade-labs';
+export const languageNames = { gl: 'Galego', es: 'Español', en: 'English' };
+export const locales = { gl: 'gl-ES', es: 'es-ES', en: 'en-US' };
+
 export const languages = ['gl', 'es', 'en'];
 export const defaultLang = 'gl';
 
