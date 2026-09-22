@@ -44,7 +44,7 @@ const groups=[t.maps,t.writing,t.tools];
  <aside class="record-desk" aria-label={t.record}>
   <div class="empty-record"><h2>{t.select}</h2><p class="record-kind">{t.selectNote}</p></div>
   {entries.map(e=><section class="record-panel" id={'record-'+e.key} data-record={e.key} aria-labelledby={'title-'+e.key}>
-   <a class="return-index" href={'#entry-'+e.key}>{t.back} ↑</a>
+   <a class="return-index" href={'#entry-'+e.key}><span class="return-mobile">{t.back} ↑</span><span class="return-desktop">{t.clear} ×</span></a>
    <h2 id={'title-'+e.key} tabindex="-1">{e.title}</h2><p class="record-kind">{e.year}</p>
    <p class="record-body">{e.body}</p>
    <dl class="record-fields">
@@ -68,12 +68,15 @@ const groups=[t.maps,t.writing,t.tools];
  function fromUrl(){const url=new URL(location.href);return url.hash.startsWith('#record-') ? url.hash.slice(8) : url.searchParams.get('p');}
  function select(key:string|null, focus=false){
   const panel=panels.find(p=>p.dataset.record===key);
+  const previousRow=rows.find(r=>r.hasAttribute('aria-current'));
+  const focusWasInDetails=desk.contains(document.activeElement);
   panels.forEach(p=>p.hidden=p!==panel);
   empty.hidden=!!panel;
   desk.classList.toggle('has-record',!!panel);
   rows.forEach(r=>{if(r.dataset.entry===key&&panel)r.setAttribute('aria-current','true');else r.removeAttribute('aria-current');});
   document.querySelectorAll<HTMLAnchorElement>('[data-language]').forEach(a=>{const u=new URL(a.href);if(panel&&key)u.searchParams.set('p',key);else u.searchParams.delete('p');a.href=u.href;});
   document.querySelector('[data-announcement]')!.textContent=panel?.querySelector('h2')?.textContent||'';
+  if(!panel && focusWasInDetails)previousRow?.focus({preventScroll:true});
   if(panel){desk.scrollTop=0;if(focus){panel.querySelector('h2')!.focus({preventScroll:true});if(mobile.matches)desk.scrollIntoView({behavior:'instant',block:'start'});}}
  }
  // Clicks create a history entry; arrow browsing updates the current selection.
@@ -107,7 +110,15 @@ const groups=[t.maps,t.writing,t.tools];
   event.preventDefault();openEntry(rows[next],true,true);
  });
  document.querySelectorAll<HTMLAnchorElement>('.return-index').forEach(a=>a.addEventListener('click',event=>{
-  event.preventDefault();const row=document.getElementById(a.hash.slice(1));row?.focus({preventScroll:true});row?.scrollIntoView({behavior:'instant',block:'center'});
+  if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+  event.preventDefault();
+  const row=document.getElementById(a.hash.slice(1));
+  const url=new URL(location.href);
+  url.searchParams.delete('p');url.hash='';
+  history.pushState(null,'',url);
+  select(null);
+  row?.focus({preventScroll:true});
+  if(mobile.matches)row?.scrollIntoView({behavior:'instant',block:'center'});
  }));
  addEventListener('popstate',()=>select(fromUrl(),desk.contains(document.activeElement)));
  addEventListener('hashchange',()=>select(fromUrl()));

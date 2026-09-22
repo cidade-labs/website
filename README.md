@@ -15,7 +15,7 @@ npm run preview
 
 ## Design and behavior
 
-The production design uses Balanced spacing, Graphite colours, and the Folio mark. The grouped index holds seven records. Selecting an entry updates `?p=record-id`; language switching and browser history retain the selection. Arrow keys browse records, Enter focuses the details, and Back to index restores row focus. Keyboard focus remains visible. Without JavaScript, all records remain in the document.
+The production design uses Balanced spacing, Graphite colours, and the Folio mark. The grouped index holds seven records. Selecting an entry updates `?p=record-id`; language switching and browser history retain the selection. Arrow keys browse records, Enter focuses the details, and clearing the selection restores row focus. Desktop shows Clear selection at the top right of the details; mobile shows Back to index and scrolls to the previous row. Both remove the selected record from the URL, and browser Back can reopen it. Keyboard focus remains visible. Without JavaScript, all records remain in the document.
 
 Light and dark mode follow the system until a preference is saved locally. There are no cookies, analytics, external fonts, or client framework runtime.
 
