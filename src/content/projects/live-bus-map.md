@@ -1,15 +1,22 @@
 ---
 title: "Bus Works"
-description: "Every city bus in A Coruña, moving in real time. Inspired by MTA and Work&Co's live subway map."
+indexSummary: "A Coruña’s bus network, with simulated vehicles."
+description: "A Coruña’s 25 bus lines on one map, with simulated vehicles moving along the actual routes."
 status: "live"
+recordId: "bus-works"
+year: 2026
+builtWith: "MapLibre GL, JavaScript"
+demonstration: true
 url: "https://busworks.cidadelabs.org"
 source: "Compañía de Tranvías de A Coruña"
 order: 1
 lang: "en"
+scope: "A Coruña"
+kind: "Demonstration"
+note: "Real routes. Simulated buses, not live positions."
+repository: "https://github.com/cidade-labs/bus-works"
 ---
 
-A live map of the city's bus network, showing every vehicle as it moves. Built on the public GTFS schedule data published by the Compañía de Tranvías de A Coruña, with real-time vehicle positions layered on top.
+A Coruña’s 25 bus lines on one map, with simulated vehicles moving along the actual routes.
 
-The goal is simple: open the map, see where your bus actually is, and know when it will reach your stop, without an app, an account, or a login.
-
-This is the lab's first tool, now live.
+Real routes. Simulated buses, not live positions.

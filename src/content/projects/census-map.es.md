@@ -1,11 +1,22 @@
 ---
 title: "ADRH Mapper"
-description: "La renta de los hogares en A Coruña, cartografiada barrio a barrio a partir del Atlas de Distribución de Renta de los Hogares del INE."
+indexSummary: "Renta, pobreza y desigualdad, sección censal a sección censal."
+description: "Renta, pobreza, desigualdad y demografía en 186 secciones censales. Quince formas de leer A Coruña."
 status: "live"
+recordId: "adrh-mapper"
+year: 2026
+builtWith: "R, sf, MapLibre GL"
 url: "https://adrh.cidadelabs.org"
 source: "Instituto Nacional de Estadística (INE)"
 order: 2
 lang: "es"
+scope: "A Coruña"
+kind: "Mapa interactivo"
+note: "Atlas de renta de los hogares del INE · Datos de 2023"
+repository: "https://github.com/cidade-labs/adrh-mapper"
+dataYear: 2023
 ---
 
-Una forma clara e interactiva de leer la renta de los hogares en los barrios de la ciudad, construida sobre el Atlas de Distribución de Renta de los Hogares del Instituto Nacional de Estadística.
+Renta, pobreza, desigualdad y demografía en 186 secciones censales. Quince formas de leer A Coruña.
+
+Atlas de renta de los hogares del INE · Datos de 2023

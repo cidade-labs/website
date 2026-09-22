@@ -1,11 +1,21 @@
 ---
 title: "Zonas Escolares"
-description: "Enter an address, see exactly which school catchment zone it falls in, anywhere across Galicia."
+indexSummary: "School catchments across 11 Galician municipalities."
+description: "Find school catchments by address. Covers 346 schools in the 11 Galician municipalities supported by the source."
 status: "live"
+recordId: "zonas-escolares"
+year: 2026
+builtWith: "Python, MapLibre GL"
 url: "https://escolares.cidadelabs.org"
 source: "Xunta de Galicia"
 order: 3
 lang: "en"
+scope: "Galicia"
+kind: "Interactive map"
+note: "Coverage follows the Xunta’s published catchment data."
+repository: "https://github.com/cidade-labs/zonas-escolares"
 ---
 
-Enter an address or click a school to see exactly which catchment zone applies, across the 11 concellos where the Xunta publishes this data. Each result opens straight into the school's full record: address, phone, website, and a link to its official page.
+Find school catchments by address. Covers 346 schools in the 11 Galician municipalities supported by the source.
+
+Coverage follows the Xunta’s published catchment data.

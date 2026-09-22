@@ -1,112 +1,44 @@
-# Cidade Labs: website
+# Cidade Labs
 
-A small Astro site for the Cidade Labs civic-tech lab. Trilingual (Galician
-default, Spanish, English). The data tools (bus map, etc.) live in separate
-repositories and are linked from the Projects section.
+Static Astro website for https://cidadelabs.org. Galician lives at `/`, Spanish at `/es/`, and English at `/en/`.
 
-## Run it locally
+## Develop
 
-You need Node.js 18+ installed. Then, in this folder:
+Use a supported Node.js LTS release with npm.
 
-```bash
-npm install      # once, downloads Astro and dependencies
-npm run dev      # starts a live preview at http://localhost:4321
+```sh
+npm ci
+npm run dev
+npm run build
+npm run preview
 ```
 
-The dev server hot-reloads: save a file and the browser updates instantly.
+## Design and behavior
 
-When you're ready to publish:
+The production design uses Balanced spacing, Graphite colours, and the Folio mark. The grouped index holds seven records. Selecting an entry updates `?p=record-id`; language switching and browser history retain the selection. Arrow keys browse records, Enter focuses the details, and Back to index restores row focus. Keyboard focus remains visible. Without JavaScript, all records remain in the document.
 
-```bash
-npm run build    # produces a static site in ./dist
-```
+Light and dark mode follow the system until a preference is saved locally. There are no cookies, analytics, external fonts, or client framework runtime.
 
-Deployed on Cloudflare Pages: build command `npm run build`, output directory
-`dist`. `dist/` is plain HTML/CSS/JS, so any static host works if that ever
-changes.
+## Editing
 
----
+- `src/components/Archive.astro`: index, records and selection behavior.
+- `src/components/Controls.astro`: language and theme controls.
+- `src/components/Mark.astro` and `public/favicon.svg`: matching Folio geometry.
+- `src/styles/appearance.css`: selected palette and spacing.
+- `src/styles/register.css`: responsive index and record layout.
+- `src/styles/global.css`: reading pages and shared styles.
+- `src/styles/figures.css`: article figure encodings and controls.
+- `src/i18n/register.js`: translated index copy.
+- `src/content/`: translated project records and essays.
 
-## How it's organized
+Existing article, about, blog and project URLs remain available. Bus Works is described as a simulation; ADRH covers 15 indicators and 186 census sections; school zones cover 346 schools in 11 municipalities.
 
-```
-src/
-  styles/global.css   ← ALL styling. Edit the tokens at the top to rebrand.
-  i18n/ui.js          ← ALL interface text, in gl/es/en. Translate here.
-  layouts/Base.astro  ← the page shell (loads fonts + css, header, footer)
-  components/          ← reusable pieces (Header, Footer, ProjectCard, PostCard)
-  content/
-    projects/         ← one .md file per project
-    blog/             ← one .md file per blog post
-  pages/
-    index.astro       ← Galician home (root, /)
-    projects.astro    ← /projects
-    about.astro       ← /about
-    blog/             ← /blog and /blog/[post]
-    en/               ← English mirror under /en/
-    es/               ← Spanish mirror under /es/
-```
+Design comparison pages and appearance query overrides have been removed from production. The complete accepted study and the previous site are recoverable in the workspace archive outside this repository.
 
----
+## Deployment
 
-## Common tasks
+Cloudflare Pages is connected to `cidade-labs/website`, production branch `main`. Build command: `npm run build`. Output directory: `dist`. Production domain: `cidadelabs.org`, configured in `astro.config.mjs`.
 
-### Change a brand colour or font
-Edit the `:root` block at the top of `src/styles/global.css`. One line changes
-it everywhere.
+Build and verify before pushing. After pushing `main`, check the Cloudflare Pages check on the GitHub commit, then verify the live homepage and favicon. Do not treat a successful Git push as proof of a successful deployment.
 
-### Add a new project
-Create a file like `src/content/projects/my-project.md`:
-
-```markdown
----
-title: "My Project"
-description: "One clear sentence about what it does."
-status: "idea"        # live | soon | idea  (controls the coloured pill)
-url: "https://..."    # optional: link to the live tool
-source: "INE"         # optional: data source credit
-order: 4              # controls position; lower = earlier
-lang: "en"
----
-
-Longer description in Markdown (optional).
-```
-
-It appears automatically on the Projects page and home.
-
-### Add a new blog post
-Create `src/content/blog/my-post.md`:
-
-```markdown
----
-title: "My Post Title"
-description: "One-sentence summary for the card and SEO."
-pubDate: 2026-07-01
-author: "Cidade Labs"
-lang: "en"
-draft: false          # set true to hide it
----
-
-Write the post in Markdown here.
-```
-
-### Add a translation for an existing project or post
-Add a sibling `.md` file with `lang: "gl"` or `lang: "es"` instead of `"en"`.
-Projects: same folder, e.g. `my-project.gl.md` next to `my-project.md`. Blog
-posts: a subfolder per language, e.g. `src/content/blog/gl/my-post.md`, so
-the translated post keeps the same URL slug as the English original (this is
-what lets the header's gl · es · en switch stay on the same article).
-
-All UI strings (nav, buttons, footer) already exist in gl/es/en in
-`src/i18n/ui.js`. Add new keys to all three language blocks together.
-
----
-
-## Notes
-
-- The language switch (gl · es · en) keeps the reader on the same page when
-  they swap languages.
-- Galician is the default and is served at the site root.
-- The site is static HTML/CSS. The only JavaScript is Astro's View
-  Transitions router, used for smoother in-page navigation.
-- Production domain is set in `astro.config.mjs` (currently cidadelabs.org).
+To roll back, revert the release commit and push the revert, or select the previous successful deployment in Cloudflare Pages.

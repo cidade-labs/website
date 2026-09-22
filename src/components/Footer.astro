@@ -1,32 +1,10 @@
 ---
-/* ============================================================
-   SITE FOOTER
-   ============================================================ */
-import { useTranslations, localizePath } from '../i18n/ui.js';
-const { lang = 'en' } = Astro.props;
-const t = useTranslations(lang);
-const year = new Date().getFullYear();
+import { archive } from '../i18n/archive.js';
+import { localizePath } from '../i18n/ui.js';
+const { lang = 'gl' } = Astro.props;
+const t = archive[lang];
 ---
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="fbrand">Cidade Labs</div>
-    <div class="fnote">{t('footer.tagline')} {t('footer.built')}</div>
-
-    <div class="fcols">
-      <div class="fcol">
-        <a href={localizePath('/projects', lang)}>{t('projects.title')}</a>
-      </div>
-      <div class="fcol">
-        <a href={localizePath('/blog', lang)}>{t('blog.title')}</a>
-      </div>
-      <div class="fcol">
-        <a href={localizePath('/about', lang)}>{t('about.title')}</a>
-      </div>
-      <div class="fcol">
-        <a href="https://github.com/cidade-labs" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </div>
-
-    <div class="fnote" style="margin-top:28px;">© {year} Cidade Labs · Galicia</div>
-  </div>
+<footer class="site-footer wrap">
+  <div><a class="footer-name" href={localizePath('/', lang)}>Cidade Labs</a><p>{t.aboutShort}</p></div>
+  <div class="footer-right"><a href="https://github.com/cidade-labs">GitHub ↗</a><p>{t.humor}</p></div>
 </footer>

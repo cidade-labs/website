@@ -1,10 +1,15 @@
 ---
 title: "New York inequality, painted with A Coruña's colors"
-description: "A short, fun look at two cities through the Gini coefficient, and one interesting thing about how America measures its own inequality."
+indexSummary: "Two cities, one scale for measuring inequality."
+description: "What changes when two cities measure inequality differently? Rebuilding New York’s figures on A Coruña’s terms."
 pubDate: 2026-07-27
 author: "Cidade Labs"
 lang: "en"
 draft: false
+kind: "research"
+scope: "A Coruña / New York"
+source: "INE · US Census Bureau"
+repository: "https://github.com/cidade-labs/journal_gini-nyc"
 ---
 
 This idea began as a question I'd been sitting on since I built the [ADRH Mapper](https://adrh.cidadelabs.org): **what would A Coruña's inequality map look like if you dropped it on New York?**
@@ -139,6 +144,7 @@ Run it backwards and A Coruña goes almost entirely blue.
   </div>
   <figcaption>Gini index by census section, INE, Atlas de Distribución de Renta de los Hogares, 2023. On New York's scale, two thirds of A Coruña collapses into the single most equal class.</figcaption>
 </figure>
+
 ## Findings
 
 Inequality piles up in the dense, old, mixed center. On both maps the red sits in the long-settled core and thins toward the edges, which is the same pattern in Galicia as in New York, at the same grain.

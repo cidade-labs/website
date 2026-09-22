@@ -9,7 +9,7 @@ const t = useTranslations(lang);
 
 const dateStr = pubDate
   ? new Date(pubDate).toLocaleDateString(lang === 'gl' ? 'gl-ES' : lang, {
-      year: 'numeric', month: 'short', day: 'numeric',
+      year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC',
     })
   : '';
 ---

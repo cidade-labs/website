@@ -19,11 +19,12 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 
 const dateStr = new Date(post.data.pubDate).toLocaleDateString('en', {
-  year: 'numeric', month: 'long', day: 'numeric',
+  year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
 });
 ---
 <Base lang={lang} active="blog" title={`${post.data.title} · Cidade Labs`} description={post.data.description}>
   <article class="article">
+    <div class="wrap"><a class="back-link" href="/en/">← Back to index</a></div>
     <div class="wrap">
       <div class="article-head">
         <p class="kicker">{t('blog.title')}</p>

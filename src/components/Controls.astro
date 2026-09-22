@@ -1,0 +1,23 @@
+---
+import { localizePath, languages } from '../i18n/ui.js';
+import { register } from '../i18n/register.js';
+const { lang = 'gl' } = Astro.props;
+const t = register[lang];
+const bare = Astro.url.pathname.replace(/^\/(es|en)(?=\/|$)/, '') || '/';
+---
+<div class="register-controls"><nav aria-label={t.languages}>{languages.map(code => <a data-language href={localizePath(bare,code)} lang={code} aria-label={code+' — '+{gl:'Galego',es:'Español',en:'English'}[code]} aria-current={code===lang?'page':undefined}>{code}</a>)}</nav><button class="lights" type="button" data-toggle aria-label={t.lights+': '+t.theme} aria-pressed="false">{t.lights}</button></div>
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('[data-toggle]');
+  const syncTheme = () => toggle?.setAttribute('aria-pressed',String(document.documentElement.dataset.theme === 'dark'));
+  toggle?.addEventListener('click',() => {
+    const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = theme;
+    try { localStorage.setItem('cidade-theme',theme); } catch {}
+    syncTheme();
+  });
+  syncTheme();
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e => {
+    let saved; try { saved=localStorage.getItem('cidade-theme'); } catch {}
+    if(saved!=='light' && saved!=='dark'){document.documentElement.dataset.theme=e.matches?'dark':'light';syncTheme();}
+  });
+</script>

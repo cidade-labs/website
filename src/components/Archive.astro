@@ -1,0 +1,117 @@
+---
+import { getCollection } from 'astro:content';
+import '../styles/global.css';
+import '../styles/register.css';
+import '../styles/appearance.css';
+import BaseHead from './BaseHead.astro';
+import Mark from './Mark.astro';
+import Controls from './Controls.astro';
+import { register } from '../i18n/register.js';
+import { localizePath, stripLangPrefix } from '../i18n/ui.js';
+const { lang = 'gl' } = Astro.props;
+const t = register[lang];
+const projects = (await getCollection('projects',p=>p.data.lang===lang)).sort((a,b)=>a.data.order-b.data.order);
+const posts = (await getCollection('blog',p=>p.data.lang===lang&&!p.data.draft)).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
+const maps = projects.map(p=>{
+ const key=p.data.recordId;
+ return {key,title:p.data.title,summary:p.data.indexSummary ?? p.data.description,body:p.data.description+' '+p.data.note,group:t.maps,year:p.data.year,source:p.data.source,built:p.data.builtWith,scope:p.data.scope,repository:p.data.repository,href:p.data.url ? p.data.url+(p.data.url.includes('?')?'&':'?')+'lang='+lang : null,action:t.open};
+});
+const writing = posts.map(p=>{
+ const slug=stripLangPrefix(p.slug,lang);
+ return {key:slug==='gini-new-york-a-coruna'?'gini':slug==='why-a-civic-lab'?'why':slug,title:p.data.title,summary:p.data.indexSummary ?? p.data.description,body:p.data.description,group:t.writing,year:p.data.pubDate.getUTCFullYear(),source:p.data.source,built:null,scope:p.data.scope,repository:p.data.repository,href:localizePath('/blog/'+slug,lang),action:t.read};
+});
+const tools = [
+ {key:'template',title:t.template,summary:t.templateShort,body:t.templateBody,group:t.tools,year:2026,source:null,built:'HTML, CSS, MapLibre GL',scope:null,repository:'https://github.com/cidade-labs/map-template',href:'https://github.com/cidade-labs/map-template',action:t.code},
+ {key:'this',title:t.this,summary:t.thisShort,body:t.thisBody,group:t.tools,year:2026,source:null,built:'Astro, HTML, CSS, TypeScript',scope:null,repository:null,href:null,action:null}
+];
+const entries=[...maps,...writing,...tools];
+const groups=[t.maps,t.writing,t.tools];
+---
+<!doctype html>
+<html lang={lang} class="register-document">
+<head><BaseHead title="Cidade Labs" description={t.sub} /><script is:inline>document.documentElement.classList.add('has-js');</script></head>
+<body class="register-site">
+<a class="skip-link" href="#index">{t.skip}</a>
+<div class="register-layout">
+ <main id="index" class="register-index" tabindex="-1">
+  <header class="mast"><div><h1><Mark />Cidade Labs</h1><p class="sub">{t.sub}</p><p class="index-meta">{t.index} · {entries.length} {t.entries}</p></div><Controls lang={lang} /></header>
+  {groups.map(group=><section class="register-group" aria-label={group}>
+   <div class="register-head"><h2 class="group-name">{group}</h2><span>{t.year}</span></div>
+   {entries.filter(e=>e.group===group).map(e=><a class="register-row" id={'entry-'+e.key} data-entry={e.key} href={'#record-'+e.key} aria-controls={'record-'+e.key}><span class="entry-title">{e.title}<small>{e.summary}</small></span><span class="year" title={e.year ? undefined : t.noDate}>{e.year ?? "—"}</span></a>)}
+  </section>)}
+  <footer class="register-footer"><p>Cidade Labs · Galicia · <a href="https://github.com/cidade-labs">GitHub</a></p><p>{t.privacy}</p></footer>
+ </main>
+ <aside class="record-desk" aria-label={t.record}>
+  <div class="empty-record"><h2>{t.select}</h2><p class="record-kind">{t.selectNote}</p></div>
+  {entries.map(e=><section class="record-panel" id={'record-'+e.key} data-record={e.key} aria-labelledby={'title-'+e.key}>
+   <a class="return-index" href={'#entry-'+e.key}>{t.back} ↑</a>
+   <h2 id={'title-'+e.key} tabindex="-1">{e.title}</h2><p class="record-kind">{e.year}</p>
+   <p class="record-body">{e.body}</p>
+   <dl class="record-fields">
+    {e.source && <><dt>{t.source}</dt><dd>{e.source}</dd></>}
+    {e.scope && <><dt>{t.scope}</dt><dd>{e.scope}</dd></>}
+    {e.built && <><dt>{t.built}</dt><dd>{e.built}</dd></>}
+    <dt>{t.languages}</dt><dd>{t.languageNames}</dd>
+    {e.repository && <><dt>{t.code}</dt><dd><a href={e.repository}>{e.repository.replace('https://github.com/','')}</a></dd></>}
+   </dl>
+   {e.href && <a class="record-open" href={e.href}>{e.action} {e.group===t.writing?'→':'↗'}</a>}
+  </section>)}
+ </aside>
+</div>
+<p class="sr-only" role="status" data-announcement></p>
+<script>
+ const rows=[...document.querySelectorAll<HTMLAnchorElement>('[data-entry]')];
+ const panels=[...document.querySelectorAll<HTMLElement>('[data-record]')];
+ const empty=document.querySelector<HTMLElement>('.empty-record')!;
+ const desk=document.querySelector<HTMLElement>('.record-desk')!;
+ const mobile=matchMedia('(max-width:800px)');
+ function fromUrl(){const url=new URL(location.href);return url.hash.startsWith('#record-') ? url.hash.slice(8) : url.searchParams.get('p');}
+ function select(key:string|null, focus=false){
+  const panel=panels.find(p=>p.dataset.record===key);
+  panels.forEach(p=>p.hidden=p!==panel);
+  empty.hidden=!!panel;
+  desk.classList.toggle('has-record',!!panel);
+  rows.forEach(r=>{if(r.dataset.entry===key&&panel)r.setAttribute('aria-current','true');else r.removeAttribute('aria-current');});
+  document.querySelectorAll<HTMLAnchorElement>('[data-language]').forEach(a=>{const u=new URL(a.href);if(panel&&key)u.searchParams.set('p',key);else u.searchParams.delete('p');a.href=u.href;});
+  document.querySelector('[data-announcement]')!.textContent=panel?.querySelector('h2')?.textContent||'';
+  if(panel){desk.scrollTop=0;if(focus){panel.querySelector('h2')!.focus({preventScroll:true});if(mobile.matches)desk.scrollIntoView({behavior:'instant',block:'start'});}}
+ }
+ // Clicks create a history entry; arrow browsing updates the current selection.
+ function openEntry(row:HTMLAnchorElement, keyboard=false, replace=false){
+  const url=new URL(location.href);
+  url.searchParams.set('p',row.dataset.entry!);url.hash='';
+  if(url.href!==location.href){
+   if(replace)history.replaceState(null,'',url);
+   else history.pushState(null,'',url);
+  }
+  select(row.dataset.entry!,keyboard && !replace);
+  if(replace){row.focus({preventScroll:true});row.scrollIntoView({block:'nearest'});}
+  else if(mobile.matches)desk.scrollIntoView({behavior:'instant',block:'start'});
+ }
+ rows.forEach(row=>row.addEventListener('click',event=>{
+  if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+  event.preventDefault();openEntry(row,event.detail===0);
+ }));
+ document.addEventListener('keydown',event=>{
+  if(event.metaKey||event.ctrlKey||event.altKey||event.shiftKey)return;
+  const active=document.activeElement;
+  const focused=rows.findIndex(row=>row===active);
+  if(focused<0 && active!==document.body && active!==document.getElementById('index'))return;
+  const current=focused>=0 ? focused : rows.findIndex(row=>row.hasAttribute('aria-current'));
+  let next:number;
+  if(event.key==='ArrowDown' || (mobile.matches && event.key==='ArrowRight'))next=(current+1)%rows.length;
+  else if(event.key==='ArrowUp' || (mobile.matches && event.key==='ArrowLeft'))next=(current<0 ? rows.length-1 : current-1+rows.length)%rows.length;
+  else if(event.key==='Home')next=0;
+  else if(event.key==='End')next=rows.length-1;
+  else return;
+  event.preventDefault();openEntry(rows[next],true,true);
+ });
+ document.querySelectorAll<HTMLAnchorElement>('.return-index').forEach(a=>a.addEventListener('click',event=>{
+  event.preventDefault();const row=document.getElementById(a.hash.slice(1));row?.focus({preventScroll:true});row?.scrollIntoView({behavior:'instant',block:'center'});
+ }));
+ addEventListener('popstate',()=>select(fromUrl(),desk.contains(document.activeElement)));
+ addEventListener('hashchange',()=>select(fromUrl()));
+ select(fromUrl(),!!fromUrl() && window.self === window.top);
+</script>
+</body>
+</html>

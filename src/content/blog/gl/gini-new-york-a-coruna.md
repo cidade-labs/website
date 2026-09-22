@@ -1,10 +1,15 @@
 ---
 title: "A desigualdade de Nova York, pintada coas cores da Coruña"
-description: "Unha ollada breve e sen pretensións a dúas cidades a través do índice de Gini, e unha cousa realmente estraña sobre como os Estados Unidos miden a súa propia desigualdade."
+indexSummary: "Dúas cidades, unha escala para medir a desigualdade."
+description: "Que cambia cando dúas cidades miden a desigualdade de xeito distinto? Reconstruír as cifras de Nova York cos criterios da Coruña."
 pubDate: 2026-07-27
 author: "Cidade Labs"
 lang: "gl"
 draft: false
+kind: "research"
+scope: "A Coruña / New York"
+source: "INE · US Census Bureau"
+repository: "https://github.com/cidade-labs/journal_gini-nyc"
 ---
 
 Isto empezou como unha curiosidade. Sen tese, sen recomendación política. Só unha pregunta que levaba tempo dándome voltas desde que fixen o [ADRH Mapper](https://adrh.cidadelabs.org): **que aspecto tería o mapa de desigualdade da Coruña se o soltases enriba de Nova York?**

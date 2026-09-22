@@ -1,10 +1,14 @@
 ---
 title: "Por que un laboratorio cívico para A Coruña"
-description: "As cidades funcionan grazas a datos públicos, pero moita desa información nunca chega ás persoas que describe. Isto é un pequeno intento de pechar esa fenda."
+indexSummary: "Facer útil a información pública, ferramenta a ferramenta."
+description: "Por que un laboratorio cívico? Unha breve nota sobre información pública, ferramentas útiles e o traballo que as conecta."
 pubDate: 2026-06-21
 author: "Cidade Labs"
 lang: "gl"
 draft: false
+kind: "note"
+scope: "Galicia"
+source: "Cidade Labs"
 ---
 
 Cidade Labs é un laboratorio pequeno e independente que constrúe mapas e ferramentas abertas a partir de datos públicos. Colle a información que a cidade xa produce (posicións dos autobuses, datos censuais, límites escolares, rexistros de planeamento) e convértea en cousas que calquera persoa en A Coruña pode usar, no navegador, de balde.

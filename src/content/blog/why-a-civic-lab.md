@@ -1,10 +1,14 @@
 ---
 title: "Why a civic lab for A Coruña"
-description: "Cities run on public data, but much of it never reaches the people it describes. This is a small attempt to close that gap."
+indexSummary: "Making public information useful, one tool at a time."
+description: "Why build a civic lab? A short note on public information, useful tools and the work between them."
 pubDate: 2026-06-21
 author: "Cidade Labs"
 lang: "en"
 draft: false
+kind: "note"
+scope: "Galicia"
+source: "Cidade Labs"
 ---
 
 Cidade Labs is a small, independent lab that builds open maps and tools on public data. It takes the information a city already produces (bus positions, census figures, school boundaries, planning records) and turns it into things anyone in A Coruña can use, in the browser, for free.

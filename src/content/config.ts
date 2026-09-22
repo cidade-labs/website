@@ -14,10 +14,15 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    indexSummary: z.string().optional(),
     pubDate: z.date(),
     author: z.string().default('Cidade Labs'),
     lang: z.enum(['gl', 'es', 'en']).default('en'),
     draft: z.boolean().default(false),
+    kind: z.enum(['research', 'note']).default('note'),
+    scope: z.string().default('Galicia'),
+    source: z.string().optional(),
+    repository: z.string().url().optional(),
   }),
 });
 
@@ -26,6 +31,7 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    indexSummary: z.string().optional(),
     // status drives the coloured pill on the card
     status: z.enum(['live', 'soon', 'idea']).default('idea'),
     // where the standalone tool lives (external link). Optional
@@ -33,6 +39,15 @@ const projects = defineCollection({
     url: z.string().optional(),
     // data source credit, shown on the card
     source: z.string().optional(),
+    recordId: z.string().regex(/^[a-z0-9-]+$/),
+    year: z.number().int().optional(),
+    builtWith: z.string().optional(),
+    demonstration: z.boolean().default(false),
+    scope: z.string(),
+    kind: z.string(),
+    note: z.string(),
+    repository: z.string().url(),
+    dataYear: z.number().optional(),
     order: z.number().default(99),
     lang: z.enum(['gl', 'es', 'en']).default('en'),
   }),

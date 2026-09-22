@@ -1,11 +1,21 @@
 ---
 title: "Zonas Escolares"
-description: "Escribe una dirección y descubre exactamente en qué zona escolar te encuentras, en cualquier punto de Galicia."
+indexSummary: "Zonas escolares en 11 municipios gallegos."
+description: "Consulta las zonas escolares por dirección. Incluye 346 centros en los 11 municipios gallegos cubiertos por la fuente."
 status: "live"
+recordId: "zonas-escolares"
+year: 2026
+builtWith: "Python, MapLibre GL"
 url: "https://escolares.cidadelabs.org"
 source: "Xunta de Galicia"
 order: 3
 lang: "es"
+scope: "Galicia"
+kind: "Mapa interactivo"
+note: "La cobertura sigue los datos de áreas de influencia de la Xunta."
+repository: "https://github.com/cidade-labs/zonas-escolares"
 ---
 
-Escribe una dirección o haz clic en un centro para ver exactamente qué área de influencia le corresponde, en los 11 concellos donde la Xunta publica estos datos. Cada resultado abre la ficha completa del centro: dirección, teléfono, web y un enlace a su página oficial.
+Consulta las zonas escolares por dirección. Incluye 346 centros en los 11 municipios gallegos cubiertos por la fuente.
+
+La cobertura sigue los datos de áreas de influencia de la Xunta.

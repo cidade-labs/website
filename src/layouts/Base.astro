@@ -1,35 +1,20 @@
 ---
-/* ============================================================
-   BASE LAYOUT
-   Every page uses this. It loads BaseHead (fonts, favicon, CSS,
-   meta) and wraps content with the site header and footer.
-   Pass `lang`, `title`, and `description`.
-   ============================================================ */
 import '../styles/global.css';
-import { ViewTransitions } from 'astro:transitions';
+import '../styles/register.css';
+import '../styles/appearance.css';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-
-const {
-  lang = 'en',
-  title = 'Cidade Labs',
-  description = 'Civic data, maps, and tools for Galicia.',
-  active = '',
-} = Astro.props;
+import { archive } from '../i18n/archive.js';
+const { lang = 'gl', title = 'Cidade Labs', description = archive[lang].intro, noindex = false } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang={lang}>
-<head>
-  <BaseHead title={title} description={description} lang={lang} />
-  <ViewTransitions />
-</head>
+<head><BaseHead title={title} description={description} noindex={noindex} /></head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <Header lang={lang} active={active} />
-  <main id="main">
-    <slot />
-  </main>
+  <a class="skip-link" href="#main">{archive[lang].skip}</a>
+  <Header lang={lang} />
+  <main id="main" tabindex="-1"><slot /></main>
   <Footer lang={lang} />
 </body>
 </html>
