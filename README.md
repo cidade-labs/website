@@ -1,44 +1,34 @@
 # Cidade Labs
 
-Static Astro website for https://cidadelabs.org. Galician lives at `/`, Spanish at `/es/`, and English at `/en/`.
+Open maps and tools on public data, for Galicia.
 
-## Develop
+The index is one page. Groups hold a register of records, and selecting a
+record holds it out on the right. Writing has its own reading pages. Galician
+at `/`, Spanish at `/es/` and English at `/en/`.
 
-Use a supported Node.js LTS release with npm.
+## Built with
 
-```sh
-npm ci
-npm run dev
-npm run build
-npm run preview
-```
+Astro, HTML, CSS and TypeScript. No client framework runtime, no external
+fonts, no analytics and no cookies.
 
-## Design and behavior
+## Design
 
-The production design uses Balanced spacing, Graphite colours, and the Folio mark. The grouped index holds seven records. Selecting an entry updates `?p=record-id`; language switching and browser history retain the selection. Arrow keys browse records, Enter focuses the details, and clearing the selection restores row focus. Desktop shows Clear selection at the top right of the details; mobile shows Back to index and scrolls to the previous row. Both remove the selected record from the URL, and browser Back can reopen it. Keyboard focus remains visible. Without JavaScript, all records remain in the document.
+The Graphite palette, Balanced spacing and the Folio mark. Light and dark
+follow the system setting, with no control and nothing stored.
 
-Light and dark mode follow the system setting, with no control and nothing stored. There are no cookies, analytics, external fonts, or client framework runtime.
+## Behavior
 
-## Editing
-
-- `src/components/Archive.astro`: index, records and selection behavior.
-- `src/components/Controls.astro`: the language nav.
-- `src/components/Mark.astro` and `public/favicon.svg`: matching Folio geometry.
-- `src/styles/appearance.css`: selected palette and spacing.
-- `src/styles/register.css`: responsive index and record layout.
-- `src/styles/global.css`: reading pages and shared styles.
-- `src/styles/figures.css`: article figure encodings and controls.
-- `src/i18n/register.js`: translated index copy.
-- `src/content/`: translated project records and essays.
-
-Existing article, about, blog and project URLs remain available. Bus Works is described as a simulation; ADRH covers 15 indicators and 186 census sections; school zones cover 346 schools in 11 municipalities.
-
-Design comparison pages and appearance query overrides have been removed from production. The complete accepted study and the previous site are recoverable in the workspace archive outside this repository.
+Selecting an entry updates `?p=record-id`, and browser history keeps the
+selection. Arrow keys browse records, and Back to index clears the selection
+and restores row focus. Switching language keeps the selected record. Keyboard
+focus stays visible. Without JavaScript every record is still in the document.
 
 ## Deployment
 
-Cloudflare Pages is connected to `cidade-labs/website`, production branch `main`. Build command: `npm run build`. Output directory: `dist`. Production domain: `cidadelabs.org`, configured in `astro.config.mjs`.
+Cloudflare Pages builds the site from `main` and publishes `dist/` to
+`cidadelabs.org`.
 
-Build and verify before pushing. After pushing `main`, check the Cloudflare Pages check on the GitHub commit, then verify the live homepage and favicon. Do not treat a successful Git push as proof of a successful deployment.
+## Sibling site
 
-To roll back, revert the release commit and push the revert, or select the previous successful deployment in Cloudflare Pages.
+The codebase is shared with [publicworks.nyc](https://github.com/jaramana/publicworks.nyc).
+A change made on either site is meant to be carried across to the other.
