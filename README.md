@@ -17,12 +17,12 @@ npm run preview
 
 The production design uses Balanced spacing, Graphite colours, and the Folio mark. The grouped index holds seven records. Selecting an entry updates `?p=record-id`; language switching and browser history retain the selection. Arrow keys browse records, Enter focuses the details, and clearing the selection restores row focus. Desktop shows Clear selection at the top right of the details; mobile shows Back to index and scrolls to the previous row. Both remove the selected record from the URL, and browser Back can reopen it. Keyboard focus remains visible. Without JavaScript, all records remain in the document.
 
-Light and dark mode follow the system until a preference is saved locally. There are no cookies, analytics, external fonts, or client framework runtime.
+Light and dark mode follow the system setting, with no control and nothing stored. There are no cookies, analytics, external fonts, or client framework runtime.
 
 ## Editing
 
 - `src/components/Archive.astro`: index, records and selection behavior.
-- `src/components/Controls.astro`: language and theme controls.
+- `src/components/Controls.astro`: the language nav.
 - `src/components/Mark.astro` and `public/favicon.svg`: matching Folio geometry.
 - `src/styles/appearance.css`: selected palette and spacing.
 - `src/styles/register.css`: responsive index and record layout.
