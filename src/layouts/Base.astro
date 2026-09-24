@@ -17,5 +17,13 @@ const { lang = defaultLang, title = siteName, description = archive[lang].intro,
   <Header lang={lang} />
   <main id="main" tabindex="-1"><slot /></main>
   <Footer lang={lang} />
+  <script>
+    document.querySelectorAll<HTMLInputElement>('.figure-slider input[type=range]').forEach((input) => {
+      const frame = input.closest<HTMLElement>('.slider-frame')!;
+      const set = () => frame.style.setProperty('--pos', input.value + '%');
+      input.addEventListener('input', set);
+      set();
+    });
+  </script>
 </body>
 </html>

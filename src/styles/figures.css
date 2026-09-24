@@ -106,3 +106,193 @@
   outline: 2px solid currentColor;
   outline-offset: 3px;
 }
+
+/* Documentary figures: preserve each frame, including source attribution. */
+.figure-wide {
+  width: min(calc(100vw - 2 * var(--pad-x)), calc(var(--max) - 2 * var(--pad-x)));
+  max-width: none;
+  margin-inline: 50%;
+  transform: translateX(-50%);
+}
+.figure-image-link { display: block; }
+.figure-image-link:focus-visible { outline-offset: 5px; }
+.article-body .figure-wide img { border: 0; background: var(--paper-2); }
+.article-body .figure-wide figcaption, .article-body .figure-portrait figcaption { font-size: var(--fs-sm); line-height: 1.55; }
+.figure-credit { display: block; margin-top: 6px; font-size: var(--fs-xs); color: var(--muted); }
+.figure-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; }
+.figure-comparison > figure { margin: 0; min-width: 0; }
+.article-body .figure-date { font: var(--fs-sm)/1.5 var(--mono); margin: 0 0 10px; }
+.article-body .figure-comparison-note { grid-column: 1 / -1; max-width: var(--max-prose); font-size: var(--fs-sm); line-height: 1.55; color: var(--muted); margin: 18px 0 0; }
+.figure-portrait { width: min(100%, 440px); margin-inline: auto; transform: none; }
+.figure video { display: block; width: 100%; height: auto; background: var(--paper-2); }
+@media (max-width: 900px) {
+  .figure-comparison { grid-template-columns: 1fr; gap: 24px; }
+  .article-body .figure-comparison-note { margin-top: 0; }
+}
+@media print { .figure-wide { width: 100%; } .figure-comparison { break-inside: avoid; } }
+
+/* Click-to-enlarge affordance on documentary photographs. */
+.figure-image-link { overflow: hidden; cursor: zoom-in; }
+.figure-image-link img { transition: transform .3s ease; }
+.figure-image-link:hover img { transform: scale(1.015); }
+
+/* Figures rise gently into view; browsers without scroll-driven animations
+   just show them in place, so this is a pure bonus, never a requirement. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) and (translate: 0) {
+    /* `translate` is a standalone property: it animates independently of
+       the `transform: translateX(-50%)` the breakout above relies on. */
+    .figure-wide, .figure-portrait {
+      opacity: 0;
+      translate: 0 14px;
+      animation: figure-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 25%;
+    }
+    @keyframes figure-reveal { to { opacity: 1; translate: 0 0; } }
+  }
+}
+
+/* --- before/after slider ------------------------------------
+   A single frame with two aligned exposures; dragging (or arrow
+   keys, via the native range input) clips the top layer to reveal
+   the one underneath. Without JS the frame still shows a labelled
+   half-and-half split, so the comparison reads either way. */
+.figure-slider .slider-frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--paper-2);
+}
+.figure-slider .slider-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.figure-slider .slider-before { clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0); }
+.figure-slider .slider-divider {
+  position: absolute;
+  inset-block: 0;
+  left: var(--pos, 50%);
+  width: 0;
+  border-left: 2px solid var(--paper);
+  box-shadow: 0 0 0 1px var(--ink);
+  pointer-events: none;
+}
+.figure-slider .slider-divider::before {
+  content: '⇔';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.figure-slider .slider-tag {
+  position: absolute;
+  top: 12px;
+  font: 11px/1.5 var(--mono);
+  color: var(--ink);
+  background: var(--paper);
+  padding: 3px 10px;
+  border: 1px solid var(--line-strong);
+  pointer-events: none;
+}
+.figure-slider .slider-tag-before { left: 12px; }
+.figure-slider .slider-tag-after { right: 12px; }
+.figure-slider input[type='range'] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: pan-y;
+}
+.figure-slider input[type='range']::-webkit-slider-thumb { -webkit-appearance: none; width: 38px; height: 100%; }
+.figure-slider input[type='range']::-moz-range-thumb { width: 38px; height: 100%; border: 0; background: transparent; }
+.figure-slider input[type='range']:focus-visible ~ .slider-divider::before { outline: 2px solid var(--ink); outline-offset: 3px; }
+.article-body .figure-slider figcaption { margin-top: 12px; }
+@media (max-width: 480px) {
+  .figure-slider .slider-tag { font-size: 10px; padding: 2px 8px; }
+}
+@media print {
+  .figure-slider .slider-before, .figure-slider input, .figure-slider .slider-divider, .figure-slider .slider-tag { display: none; }
+}
+
+/* Small mono label above a figure, for wayfinding when several
+   comparisons of different kinds (aerial, street level) sit in a row. */
+.article-body .figure-kicker {
+  font: 11px/1.5 var(--mono);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  margin: 0 0 10px;
+}
+
+/* --- year stepper (La Solana) ---------------------------------
+   Same radio-driven approach as the scale toggle above: pick a
+   year to swap the frame's image. No JS; keyboard-operable via
+   the labels; degrades to showing the first (checked) year without CSS. */
+.figure-years > input { position: absolute; opacity: 0; pointer-events: none; }
+.year-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.year-tabs label {
+  font: var(--fs-sm)/1 var(--mono);
+  padding: 7px 14px;
+  border: 1px solid var(--line-strong);
+  color: var(--muted);
+  cursor: pointer;
+  transition: background .12s ease, color .12s ease, border-color .12s ease;
+}
+.year-tabs label:hover { border-color: var(--ink); color: var(--ink); }
+.year-frame { position: relative; overflow: hidden; background: var(--paper-2); }
+.year-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+@media (prefers-reduced-motion: reduce) { .year-frame img { transition: none; } }
+.figure-years > input:nth-of-type(1):checked ~ .year-frame img:nth-of-type(1),
+.figure-years > input:nth-of-type(2):checked ~ .year-frame img:nth-of-type(2),
+.figure-years > input:nth-of-type(3):checked ~ .year-frame img:nth-of-type(3),
+.figure-years > input:nth-of-type(4):checked ~ .year-frame img:nth-of-type(4),
+.figure-years > input:nth-of-type(5):checked ~ .year-frame img:nth-of-type(5) { opacity: 1; }
+.figure-years > input:nth-of-type(1):checked ~ .year-tabs label:nth-of-type(1),
+.figure-years > input:nth-of-type(2):checked ~ .year-tabs label:nth-of-type(2),
+.figure-years > input:nth-of-type(3):checked ~ .year-tabs label:nth-of-type(3),
+.figure-years > input:nth-of-type(4):checked ~ .year-tabs label:nth-of-type(4),
+.figure-years > input:nth-of-type(5):checked ~ .year-tabs label:nth-of-type(5) {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+.figure-years > input:nth-of-type(1):focus-visible ~ .year-tabs label:nth-of-type(1),
+.figure-years > input:nth-of-type(2):focus-visible ~ .year-tabs label:nth-of-type(2),
+.figure-years > input:nth-of-type(3):focus-visible ~ .year-tabs label:nth-of-type(3),
+.figure-years > input:nth-of-type(4):focus-visible ~ .year-tabs label:nth-of-type(4),
+.figure-years > input:nth-of-type(5):focus-visible ~ .year-tabs label:nth-of-type(5) {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+@media print {
+  .year-tabs { display: none; }
+  .year-frame img { position: static; opacity: 1; display: none; }
+  .year-frame img:first-of-type { display: block; }
+}
