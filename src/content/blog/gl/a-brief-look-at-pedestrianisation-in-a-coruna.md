@@ -13,7 +13,7 @@ source: "Google Earth · Google Street View · Cidade Labs"
 
 <p class="lede">Dez lugares da Coruña, desde o Cuartel de Atocha ata o colexio da Cidade Vella. As fotografías de 2026 aparecen xunto a vistas históricas seleccionadas de Google Earth. Amosan a disposición do pavimento, as calzadas, a vexetación e os edificios.</p>
 
-A rúa forma parte da vida diaria, non é só unha vía para o tráfico. A peonalización abre espazo para camiñar, atoparse, ir en bicicleta e chegar aos lugares próximos con menos competencia dos coches en movemento e aparcados. Aquí, o cambio vese de maneira concreta. Máis espazo público está pensado para estar nel, non só para atravesalo. Poder pasear sen unha corrente de coches debería ser algo normal. Facelo posible é unha decisión que merece celebrarse.
+A rúa forma parte da vida diaria, non é só unha vía para o tráfico. A peonalización abre espazo para camiñar, atoparse, ir en bicicleta e chegar aos lugares próximos con menos competencia dos coches en movemento e aparcados. Nalgúns destes lugares, o espazo antes ocupado pola calzada e o aparcadoiro deu paso a zonas peonís máis amplas, vexetación e bancos. Paréceme que ese cambio merece celebrarse.
 
 O Plan de Mobilidade Urbana Sustentable (PMUS) da Coruña establece como obxectivos municipais os itinerarios peonís, a accesibilidade e os camiños escolares seguros. Estas fotografías amosan lugares seleccionados e convidan a observalos máis de preto.
 
@@ -192,7 +192,7 @@ O Plan de Mobilidade Urbana Sustentable (PMUS) da Coruña establece como obxecti
 
 ## Fábrica de Tabacos / Catro Camiños
 
-Este lugar funciona de xeito distinto aos demais deste artigo. Non é unha rúa adaptada para as persoas; é tecido urbano novo, construído onde antes estaba o patio da fábrica e as súas vías de acceso.
+Na antiga fábrica de tabacos, novas rúas e espazos abertos substituíron o patio da fábrica e as súas vías de acceso.
 
 <p class="figure-kicker">Vista aérea, 2007–2022</p>
 <div class="figure figure-wide figure-comparison">
@@ -239,7 +239,7 @@ Este lugar funciona de xeito distinto aos demais deste artigo. Non é unha rúa 
 
 ## Cidade Vella
 
-Os coches non son un elemento fixo aquí. As rúas estreitas do casco vello nunca se construíron para eles, e as décadas nas que aparcaron e circularon por elas son a excepción, non a norma. Sen tráfico, a textura da vida diaria na rúa cambia: menos ruído, menos gases de escape e ningún vehículo en movemento con peso abondo para facer dano de verdade a alguén. Iso importa sobre todo ás persoas que peor poden absorber o erro dun condutor: os nenos que van a pé ao colexio, as persoas maiores, calquera que cruce sen mirar dúas veces. Unha vez que unha rúa así se pecha aos coches, reabrila non é algo que ninguén propoña en serio.
+As rúas estreitas da Cidade Vella levan hoxe moito menos tráfico de paso ca antes. Camiñar por elas significa menos ruído, menos gases de escape e menos conflitos con vehículos en movemento. Iso importa sobre todo ás persoas que peor poden absorber o erro dun condutor — os nenos que van a pé ao colexio, as persoas maiores, calquera que cruce sen mirar dúas veces. Non espero que estas rúas volvan abrirse aos coches.
 
 <p class="figure-kicker">Vista aérea, 2007–2022</p>
 <div class="figure figure-wide figure-comparison">
@@ -304,8 +304,4 @@ Os informes municipais explican o propósito e o alcance destes cambios. O PMUS 
 - [Información municipal sobre a primeira fase na Cidade Vella](https://www.coruna.gal/movilidad/es/actualidad/detalle-hemeroteca/movilidad-informa-a-vecinos-y-comerciantes-de-que-la-primera-fase-de-la-peatonalizacion-de-la-ciudad/suceso/1405041479684?argIdioma=gl) — fases, consulta e medidas de acceso.
 - [Información municipal sobre obras de accesibilidade na Praza de Lugo e rúas próximas](https://www.coruna.gal/web/gl/actualidade/novas/nova/o-plan-de-mobilidade-avanza-coa-adxudicacion-de-obras-por-preto-dun-millon-de-euros/suceso/1453755812401?argIdioma=gl) — descrición das obras e das melloras previstas.
 
-Esta selección non é unha avaliación completa do programa de peonalización da Coruña. As datas das fotos proceden dos metadatos orixinais. As datas aéreas identifican a vista da cronoloxía de Google Earth, non a finalización das obras; a imaxe pode ser anterior ao ano seleccionado. As datas de Street View léronse no propio visor de Google no momento da captura, comprobadas unha a unha; un pequeno número de ficheiros de orixe estaban mal etiquetados e renomeáronse para reflectir a data correcta. A estación, as sombras e o punto de vista tamén afectan á comparación, e un par de imaxes de Street View non sempre proceden exactamente do mesmo punto do panorama; onde as dúas vistas difiren claramente, móstranse unha ao lado da outra en lugar de nun control deslizante. As fotografías redimensionáronse; ás capturas aéreas e de Street View quitáronselles as barras do navegador e da aplicación, mantendo a marca de Google e a atribución visible. Non se engadiu nin eliminou contido da escena. As [directrices xeográficas de Google](https://about.google/brand-resource-center/products-and-services/geo-guidelines/) permiten incorporar Street View, pero non volver publicar capturas; as imaxes de Street View deste artigo son capturas usadas con atribución, e isto debería revisarse contra as directrices actuais de Google antes de publicar nada deste artigo fóra deste borrador local.
-
-### Un futuro mapa da cidade
-
-Paga a pena crear un mapa de seguimento: un inventario ligado ás fontes podería indicar onde está cada actuación, que cambiou, cando e se está proposta, en curso ou rematada. Os topónimos deste artigo xa ofrecen un punto de partida. Cada rexistro debería ter un identificador estable, nome oficial e variantes, xeometría, tipo de intervención, datas, estado, notas de accesibilidade, fonte municipal primaria e data da última revisión. Os límites e o estado deben quedar como descoñecidos ata que os confirme unha fonte oficial; cómpre distinguir as propostas das obras rematadas. Así, o mapa sería un índice público útil sen pretender medir por si só o éxito.
+Esta selección non é unha avaliación completa do programa de peonalización da Coruña. As datas das fotos proceden dos metadatos orixinais. As datas aéreas identifican a vista da cronoloxía de Google Earth, non a finalización das obras; a imaxe pode ser anterior ao ano seleccionado. As datas de Street View léronse no propio visor de Google no momento da captura, comprobadas unha a unha; un pequeno número de ficheiros de orixe estaban mal etiquetados e renomeáronse para reflectir a data correcta. A estación, as sombras e o punto de vista tamén afectan á comparación, e un par de imaxes de Street View non sempre proceden exactamente do mesmo punto do panorama; onde as dúas vistas difiren claramente, móstranse unha ao lado da outra en lugar de nun control deslizante. As fotografías redimensionáronse; ás capturas aéreas e de Street View quitáronselles as barras do navegador e da aplicación, mantendo a marca de Google e a atribución visible. Non se engadiu nin eliminou contido da escena. As imaxes de Street View deste artigo son capturas usadas con atribución, conforme ás [directrices xeográficas de Google](https://about.google/brand-resource-center/products-and-services/geo-guidelines/).

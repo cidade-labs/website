@@ -1,7 +1,7 @@
 ---
 title: "ADRH Mapper"
-indexSummary: "Income, poverty and inequality, one census section at a time."
-description: "Income, poverty, inequality and demographics across 186 census sections. Fifteen ways to read A Coruña."
+indexSummary: "Income, poverty, and inequality across A Coruña's 186 census sections."
+description: "Explore 15 indicators from the INE's 2023 household income atlas."
 status: "live"
 recordId: "adrh-mapper"
 year: 2026
@@ -17,6 +17,6 @@ repository: "https://github.com/cidade-labs/adrh-mapper"
 dataYear: 2023
 ---
 
-Income, poverty, inequality and demographics across 186 census sections. Fifteen ways to read A Coruña.
+Income, poverty, and inequality across A Coruña's 186 census sections.
 
-INE household income atlas · 2023 data
+Explore 15 indicators from the INE's 2023 household income atlas.

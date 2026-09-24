@@ -1,7 +1,7 @@
 ---
 title: "Zonas Escolares"
 indexSummary: "School catchments across 11 Galician municipalities."
-description: "Find school catchments by address. Covers 346 schools in the 11 Galician municipalities supported by the source."
+description: "Search catchment areas by address in the 11 municipalities covered by the Xunta's published data."
 status: "live"
 recordId: "zonas-escolares"
 year: 2026
@@ -16,6 +16,6 @@ note: "Coverage follows the Xunta’s published catchment data."
 repository: "https://github.com/cidade-labs/zonas-escolares"
 ---
 
-Find school catchments by address. Covers 346 schools in the 11 Galician municipalities supported by the source.
+Search catchment areas by address in the 11 municipalities covered by the Xunta's published data.
 
 Coverage follows the Xunta’s published catchment data.

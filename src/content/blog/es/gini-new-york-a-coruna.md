@@ -1,7 +1,7 @@
 ---
 title: "La desigualdad de Nueva York, pintada con los colores de A Coruña"
-indexSummary: "Dos ciudades, una escala para medir la desigualdad."
-description: "¿Qué cambia cuando dos ciudades miden la desigualdad de forma distinta? Reconstruir las cifras de Nueva York con los criterios de A Coruña."
+indexSummary: "A Coruña y Nueva York, con la misma escala de Gini."
+description: "Cómo cambia la comparación cuando se ajustan los datos de renta de Nueva York a la medida española."
 pubDate: 2026-07-27
 author: "Cidade Labs"
 lang: "es"
@@ -68,9 +68,9 @@ Consecuencia práctica: toda cifra de Estados Unidos que aparece a continuación
 
 ## El experimento
 
-Todo mapa de coropletas puntúa en curva. Los colores salen del mínimo y del máximo de esa misma ciudad, así que hasta una ciudad perfectamente igualitaria produce un degradado agradable. Te enseña dónde están los extremos locales. No dice nada sobre si "extremo" aquí significa algo en otro sitio.
+Los mapas originales usan rangos de color distintos, así que el mismo color no representa el mismo valor de Gini en las dos ciudades.
 
-Así que: fijar la escala de A Coruña y soltarla encima de Nueva York. Y después darle la vuelta y ver qué reaparece.
+Los mapas de abajo aplican los cortes de color de cada ciudad a los datos de la otra.
 
 <figure class="figure gini-fig">
   <input type="radio" name="scale-nyc" id="scale-nyc-a" class="sa" checked />
@@ -152,7 +152,7 @@ La desigualdad se acumula en el centro denso, viejo y mezclado. En los dos mapas
 
 Nueva York podría reflejar una tendencia más amplia de desigualdad más extrema en Estados Unidos. Esa tendencia resulta más difícil de ver porque lo que suele ser una fuente de riqueza para quienes más ganan, las ganancias patrimoniales, no aparecen en los datos de la encuesta estadounidense.
 
-Así que la diferencia entre estas dos ciudades no es que una tenga barrios desiguales y la otra no. Es cuánta ciudad ocupan.
+Los valores altos de Gini cubren mucha más parte de las secciones censales de Nueva York que de las de A Coruña.
 
 <figure class="figure">
   <img src="/journal/gini/15_neighbourhood_comparison.png" alt="Gráfico de puntos que sitúa los diez distritos censales de A Coruña a lo largo de la distribución de 196 áreas de barrio de Nueva York según su Gini mediano." loading="lazy" />
@@ -167,7 +167,7 @@ Así que la diferencia entre estas dos ciudades no es que una tenga barrios desi
 
 **Dispersión y contexto.** El Gini describe lo estirada que está la renta dentro de un área, y depende por completo del contexto. Dos barrios, en ciudades distintas, pueden puntuar igual y no parecerse en nada.
 
-**Bienestar.** Los impuestos de A Coruña vuelven en escuelas infantiles, universidad, sanidad, transporte y una pensión con la que se puede vivir. Los de Nueva York, en su mayoría, no. Rentas que parecen iguales en las dos ciudades no son vidas iguales, y ninguna armonización puede arreglar eso.
+**Bienestar.** Este marco es mi propia lectura, no algo que midan los números de arriba. Los impuestos de A Coruña financian escuelas infantiles, universidad, sanidad, transporte y una pensión con la que se puede vivir, y los de Nueva York en su mayoría no compran las mismas cosas. Si eso es cierto, rentas que parecen iguales en las dos ciudades no son vidas iguales, y ninguna armonización arregla eso.
 
 ---
 

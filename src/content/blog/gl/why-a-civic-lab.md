@@ -1,7 +1,7 @@
 ---
 title: "Por que un laboratorio cívico para A Coruña"
-indexSummary: "Facer útil a información pública, ferramenta a ferramenta."
-description: "Por que un laboratorio cívico? Unha breve nota sobre información pública, ferramentas útiles e o traballo que as conecta."
+indexSummary: "Por que Cidade Labs constrúe mapas con datos públicos."
+description: "Por que creamos Cidade Labs e como usan datos públicos os seus proxectos."
 pubDate: 2026-06-21
 author: "Cidade Labs"
 lang: "gl"
@@ -11,10 +11,8 @@ scope: "Galicia"
 source: "Cidade Labs"
 ---
 
-Cidade Labs é un laboratorio pequeno e independente que constrúe mapas e ferramentas abertas a partir de datos públicos. Colle a información que a cidade xa produce (posicións dos autobuses, datos censuais, límites escolares, rexistros de planeamento) e convértea en cousas que calquera persoa en A Coruña pode usar, no navegador, de balde.
+As cidades e institucións galegas publican moitos datos públicos: posicións dos autobuses, datos censuais, límites escolares, rexistros de planeamento. A maioría queda en follas de cálculo e PDF difíciles de usar no día a día.
 
-O modelo está tomado e inspirado en oficinas de tecnoloxía cívica do Concello de Nova York e de BetaNYC. Construímos ferramentas ben feitas e de código aberto sobre datos públicos, documentamos como funcionan e regalámolas. Cada proxecto aquí indica as súas fontes de datos e explica o seu método.
+Cidade Labs existe para converter eses datos en mapas e ferramentas que calquera poida abrir nun navegador, de balde. O modelo está tomado e inspirado en oficinas de tecnoloxía cívica do Concello de Nova York e de BetaNYC: construír ferramentas ben feitas e de código aberto sobre datos públicos, e regalalas.
 
-## Como funciona
-
-O laboratorio non xera datos. As institucións públicas (a Compañía de Tranvías, o Instituto Nacional de Estadística, o Concello da Coruña, a Xunta de Galicia) fano como parte da xestión dunha cidade e dunha rexión. A idea é facer lexible ese traballo. Cada ferramenta é de código aberto e vive no seu propio repositorio, para que calquera poida lela, reutilizala ou melloralas.
+Consulta [Sobre nós](/about) para saber como funciona cada proxecto e que datos usa.

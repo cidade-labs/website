@@ -1,7 +1,7 @@
 ---
 title: "Zonas Escolares"
 indexSummary: "Zonas escolares en 11 municipios gallegos."
-description: "Consulta las zonas escolares por dirección. Incluye 346 centros en los 11 municipios gallegos cubiertos por la fuente."
+description: "Busca las zonas de influencia por dirección en los 11 municipios cubiertos por los datos publicados por la Xunta."
 status: "live"
 recordId: "zonas-escolares"
 year: 2026
@@ -16,6 +16,6 @@ note: "La cobertura sigue los datos de áreas de influencia de la Xunta."
 repository: "https://github.com/cidade-labs/zonas-escolares"
 ---
 
-Consulta las zonas escolares por dirección. Incluye 346 centros en los 11 municipios gallegos cubiertos por la fuente.
+Busca las zonas de influencia por dirección en los 11 municipios cubiertos por los datos publicados por la Xunta.
 
 La cobertura sigue los datos de áreas de influencia de la Xunta.

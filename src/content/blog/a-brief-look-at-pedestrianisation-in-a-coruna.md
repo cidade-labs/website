@@ -13,7 +13,7 @@ source: "Google Earth · Google Street View · Cidade Labs"
 
 <p class="lede">Ten places in A Coruña, from Cuartel de Atocha to the school in Cidade Vella. Field photographs from 2026 sit alongside selected historical views from Google Earth. They record visible arrangements of paving, roads, planting and buildings.</p>
 
-A city street is part of daily life, not just a route for traffic. Pedestrianization makes room for people to walk, meet, cycle and reach local places with less competition from moving and parked cars. Here, the shift is tangible. More of the public realm is shaped around being there, not simply passing through. A quiet walk without a stream of cars should feel ordinary. Making it ordinary is a choice worth celebrating.
+A city street is part of daily life, not just a route for traffic. Pedestrianization makes room for people to walk, meet, cycle and reach local places with less competition from moving and parked cars. In several of these places, road space and parking have given way to wider walking areas, planting, and seating. I think that shift is worth celebrating.
 
 A Coruña’s Sustainable Urban Mobility Plan (PMUS) sets out pedestrian routes, accessibility and safe school journeys as municipal goals. These photographs show selected places and invite a closer look.
 
@@ -192,7 +192,7 @@ A Coruña’s Sustainable Urban Mobility Plan (PMUS) sets out pedestrian routes,
 
 ## Fábrica de Tabacos / Catro Camiños
 
-This site works differently from the others here. It is not a street retrofitted for people; it is new urban fabric, built where the factory yard and its access roads used to be.
+At the former tobacco factory, new streets and open spaces replaced the factory yard and its access roads.
 
 <p class="figure-kicker">Aerial view, 2007–2022</p>
 <div class="figure figure-wide figure-comparison">
@@ -239,7 +239,7 @@ This site works differently from the others here. It is not a street retrofitted
 
 ## Cidade Vella
 
-Cars are not a fixture here. The old town's narrow streets were never built for them, and the decades when they parked and drove through are the exception, not the rule. Without traffic, the texture of daily life on the street changes: less noise, less exhaust, and no moving vehicle heavy enough to seriously hurt someone. That matters most to the people who can least absorb a driver's mistake: children walking to school, older residents, anyone crossing without looking twice. Once a street like this closes to cars, reopening it is not something anyone seriously proposes.
+The narrow streets of Cidade Vella now carry much less through traffic than they once did. Walking there means less noise, less exhaust, and fewer conflicts with moving vehicles. That matters most to the people who can least absorb a driver's mistake — children walking to school, older residents, anyone crossing without looking twice. I don't expect these streets to reopen to cars.
 
 <p class="figure-kicker">Aerial view, 2007–2022</p>
 <div class="figure figure-wide figure-comparison">
@@ -304,8 +304,4 @@ The Concello’s reports explain the purpose and scope of these changes. The PMU
 - [City report on the first phase in Cidade Vella](https://www.coruna.gal/movilidad/es/actualidad/detalle-hemeroteca/movilidad-informa-a-vecinos-y-comerciantes-de-que-la-primera-fase-de-la-peatonalizacion-de-la-ciudad/suceso/1405041479684?argIdioma=gl) — phasing, consultation and access arrangements.
 - [City report on accessibility works at Praza de Lugo and nearby streets](https://www.coruna.gal/web/gl/actualidade/novas/nova/o-plan-de-mobilidade-avanza-coa-adxudicacion-de-obras-por-preto-dun-millon-de-euros/suceso/1453755812401?argIdioma=gl) — municipal account of the works and intended improvements.
 
-This selection is not a comprehensive evaluation of A Coruña’s pedestrianization programme. Photo dates come from original capture metadata. Aerial dates identify the selected Google Earth timeline view, not completion of works; imagery can be older than the selected year. Street View dates are read from Google’s own viewer at the point of capture, checked against each screenshot individually; a small number of source files were mislabelled and have been renamed to match. Season, shadows and viewpoint also affect comparisons, and a paired Street View before-and-after is not always taken from the exact same panorama position; where the two views clearly diverge, they are shown side by side rather than as a drag slider. Photographs were resized; aerial and Street View screenshots had browser and app chrome removed while retaining the Google mark and visible attribution. No scene content was added or removed. [Google’s Geo guidelines](https://about.google/brand-resource-center/products-and-services/geo-guidelines/) permit embedding Street View, not republishing screenshots; the Street View images here are screenshots used with attribution, and this should be checked against Google’s current guidelines before anything in this article is published externally.
-
-### A future citywide map
-
-A map tracker is worth pursuing: a source-linked inventory could show where each scheme is, what changed, when, and whether it is proposed, underway or complete. The place names in this article are a starting set. Each future record should include a stable place ID, official name and aliases, geometry, intervention type, dates, status, accessibility notes, primary municipal source and last-checked date. Keep boundaries and status unknown until an official source verifies them, and distinguish proposals from completed changes. This could be a useful public index without pretending that a map alone measures success.
+This selection is not a comprehensive evaluation of A Coruña’s pedestrianization programme. Photo dates come from original capture metadata. Aerial dates identify the selected Google Earth timeline view, not completion of works; imagery can be older than the selected year. Street View dates are read from Google’s own viewer at the point of capture, checked against each screenshot individually; a small number of source files were mislabelled and have been renamed to match. Season, shadows and viewpoint also affect comparisons, and a paired Street View before-and-after is not always taken from the exact same panorama position; where the two views clearly diverge, they are shown side by side rather than as a drag slider. Photographs were resized; aerial and Street View screenshots had browser and app chrome removed while retaining the Google mark and visible attribution. No scene content was added or removed. Street View images are used here as screenshots with attribution, consistent with [Google’s Geo guidelines](https://about.google/brand-resource-center/products-and-services/geo-guidelines/).

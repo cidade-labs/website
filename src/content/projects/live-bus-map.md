@@ -13,10 +13,10 @@ order: 1
 lang: "en"
 scope: "A Coruña"
 kind: "Demonstration"
-note: "Real routes. Simulated buses, not live positions."
+note: "Bus positions are simulated along published routes; they are not live vehicle locations."
 repository: "https://github.com/cidade-labs/bus-works"
 ---
 
 A Coruña’s 25 bus lines on one map, with simulated vehicles moving along the actual routes.
 
-Real routes. Simulated buses, not live positions.
+Bus positions are simulated along published routes; they are not live vehicle locations.

@@ -1,7 +1,7 @@
 ---
 title: "New York inequality, painted with A Coruña's colors"
-indexSummary: "Two cities, one scale for measuring inequality."
-description: "What changes when two cities measure inequality differently? Rebuilding New York’s figures on A Coruña’s terms."
+indexSummary: "Comparing A Coruña and New York with the same Gini scale."
+description: "How the comparison changes when New York’s income data is adjusted to match the Spanish measure."
 pubDate: 2026-07-27
 author: "Cidade Labs"
 lang: "en"
@@ -67,9 +67,9 @@ Practical implication: every US figure below is a **floor**. Given how wealth ac
 
 ## The end result
 
-Every choropleth grades on a curve. The colors come from that city's own minimum and maximum, so even a nearly perfectly equal city produces a nice gradient. It shows you where the local extremes are. It says nothing about whether "extreme" here means anything anywhere else.
+The original maps use different color ranges, so the same color does not represent the same Gini value in both cities.
 
-So, hold A Coruña's scale fixed, and drop it on New York. Then flip it back and watch what returns.
+The maps below apply each city's color breaks to the other city's data.
 
 <figure class="figure gini-fig">
   <input type="radio" name="scale-nyc" id="scale-nyc-a" class="sa" checked />
@@ -151,7 +151,7 @@ Inequality piles up in the dense, old, mixed center. On both maps the red sits i
 
 New York might reflect a greater trend of more extreme inequality in the United States. This trend is more obscure given that what's commonly known to be a source of wealth for the highest earners, capital gains, are not reflected in America's survey data.
 
-More practically, however, is the difference between these two cities isn't that one has unequal neighborhoods and the other doesn't. It's how much of the city they take up.
+High Gini values cover a much larger share of New York's census tracts than of A Coruña's.
 
 <figure class="figure">
   <img src="/journal/gini/15_neighbourhood_comparison.png" alt="Dot chart placing A Coruña's ten census districts along the distribution of 196 New York neighborhood tabulation areas by median Gini." loading="lazy" />
@@ -166,7 +166,7 @@ More practically, however, is the difference between these two cities isn't that
 
 **Spread and Context.** Gini describes how stretched incomes are inside an area, and is entirely context dependent. Two neighborhoods, in different cities, can score identically and feel nothing alike.
 
-**Welfare.** A Coruña's taxes come back as childcare, university, healthcare, transit and a livable pension. New York's mostly don't. Equal-looking incomes in the two cities are not equal lives, and no amount of harmonizing can fix that.
+**Welfare.** That framing is my own read, not something the numbers above measure. A Coruña's taxes fund childcare, university, healthcare, transit and a livable pension, and New York's taxes mostly don't buy the same things. If that's right, equal-looking incomes in the two cities aren't equal lives, and no amount of harmonizing fixes that.
 
 ---
 

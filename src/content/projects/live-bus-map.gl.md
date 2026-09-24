@@ -13,10 +13,10 @@ order: 1
 lang: "gl"
 scope: "A Coruña"
 kind: "Demostración"
-note: "Rutas reais. Autobuses simulados, sen posicións en directo."
+note: "As posicións dos autobuses son simuladas sobre as rutas publicadas; non son posicións reais dos vehículos."
 repository: "https://github.com/cidade-labs/bus-works"
 ---
 
 As 25 liñas de autobús da Coruña nun mapa, con vehículos simulados sobre os percorridos reais.
 
-Rutas reais. Autobuses simulados, sen posicións en directo.
+As posicións dos autobuses son simuladas sobre as rutas publicadas; non son posicións reais dos vehículos.

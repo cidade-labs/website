@@ -1,7 +1,7 @@
 ---
 title: "ADRH Mapper"
-indexSummary: "Renta, pobreza y desigualdad, sección censal a sección censal."
-description: "Renta, pobreza, desigualdad y demografía en 186 secciones censales. Quince formas de leer A Coruña."
+indexSummary: "Renta, pobreza y desigualdad en las 186 secciones censales de A Coruña."
+description: "Explora 15 indicadores del atlas de renta de los hogares del INE, de 2023."
 status: "live"
 recordId: "adrh-mapper"
 year: 2026
@@ -17,6 +17,6 @@ repository: "https://github.com/cidade-labs/adrh-mapper"
 dataYear: 2023
 ---
 
-Renta, pobreza, desigualdad y demografía en 186 secciones censales. Quince formas de leer A Coruña.
+Renta, pobreza y desigualdad en las 186 secciones censales de A Coruña.
 
-Atlas de renta de los hogares del INE · Datos de 2023
+Explora 15 indicadores del atlas de renta de los hogares del INE, de 2023.

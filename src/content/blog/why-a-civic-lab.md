@@ -1,7 +1,7 @@
 ---
 title: "Why a civic lab for A Coruña"
-indexSummary: "Making public information useful, one tool at a time."
-description: "Why build a civic lab? A short note on public information, useful tools and the work between them."
+indexSummary: "Why Cidade Labs builds maps from public data."
+description: "Why we built Cidade Labs and how its projects use public data."
 pubDate: 2026-06-21
 author: "Cidade Labs"
 lang: "en"
@@ -11,10 +11,8 @@ scope: "Galicia"
 source: "Cidade Labs"
 ---
 
-Cidade Labs is a small, independent lab that builds open maps and tools on public data. It takes the information a city already produces (bus positions, census figures, school boundaries, planning records) and turns it into things anyone in A Coruña can use, in the browser, for free.
+Galician cities and institutions publish a lot of public data: bus positions, census figures, school boundaries, planning records. Most of it stays in spreadsheets and PDFs that are hard to use day to day.
 
-The model is borrowed and inspired from civic-technology offices within the City of New York and BetaNYC. We build well-made, open-source tools on public data, document how they work, and give them away. Every project here names its data sources and explains its method.
+Cidade Labs exists to turn that data into maps and tools anyone can open in a browser, for free. The model is borrowed and inspired from civic-technology offices within the City of New York and BetaNYC: build well-made, open-source tools on public data, and give them away.
 
-## How it works
-
-The lab does not generate data. Public institutions (the Compañía de Tranvías, the Instituto Nacional de Estadística, the Concello da Coruña, the Xunta de Galicia) do that as part of running a city and a region. The idea is to make that work legible. Each tool is open-source and lives in its own repository, so anyone can read it, reuse it, or improve it.
+See [About](/en/about) for how each project works and what data it draws on.
