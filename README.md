@@ -1,34 +1,7 @@
-# Cidade Labs
+# cidadelabs.org
 
-Open maps and tools on public data, for Galicia.
+The built Cidade Labs site, served at [cidadelabs.org](https://cidadelabs.org) from `site/`.
 
-The index is one page. Groups hold a register of records, and selecting a
-record holds it out on the right. Writing has its own reading pages. Galician
-at `/`, Spanish at `/es/` and English at `/en/`.
+The source lives in `sites/cidadelabs/` of [jaramana/publicworks.nyc](https://github.com/jaramana/publicworks.nyc), which builds publicworks.nyc from the same code. Don't edit `site/` by hand. Change the source there, run `SITE=cidadelabs npm run build`, and replace `site/` with the new `dist-cidadelabs/`. A push to `main` publishes it.
 
-## Built with
-
-Astro, HTML, CSS and TypeScript. No client framework runtime, no external
-fonts, no analytics and no cookies.
-
-## Design
-
-The Graphite palette, Balanced spacing and the Folio mark. Light and dark
-follow the system setting, with no control and nothing stored.
-
-## Behavior
-
-Selecting an entry updates `?p=record-id`, and browser history keeps the
-selection. Arrow keys browse records, and Back to index clears the selection
-and restores row focus. Switching language keeps the selected record. Keyboard
-focus stays visible. Without JavaScript every record is still in the document.
-
-## Deployment
-
-Cloudflare Pages builds the site from `main` and publishes `dist/` to
-`cidadelabs.org`.
-
-## Sibling site
-
-The codebase is shared with [publicworks.nyc](https://github.com/jaramana/publicworks.nyc).
-A change made on either site is meant to be carried across to the other.
+The site's earlier Astro source is in this repository's history, up to `7f7f1d4`.

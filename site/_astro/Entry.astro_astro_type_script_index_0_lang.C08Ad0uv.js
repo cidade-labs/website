@@ -1,0 +1,1 @@
+import"./mast.C6J7NN-E.js";document.querySelectorAll(`.figure-slider input[type=range]`).forEach(e=>{let t=e.closest(`.slider-frame`),n=()=>t.style.setProperty(`--pos`,e.value+`%`);e.addEventListener(`input`,n),n()});

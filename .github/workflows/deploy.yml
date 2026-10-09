@@ -1,7 +1,8 @@
-# Builds the site and publishes dist/ to GitHub Pages.
+# Publishes site/ to GitHub Pages. The files are already built, by
+# SITE=cidadelabs npm run build in jaramana/publicworks.nyc, so this
+# workflow only uploads them.
 #
 # One-time setup in the repository: Settings → Pages → Source → GitHub Actions.
-# The CNAME lives in public/, so the custom domain survives every build.
 name: Deploy
 
 on:
@@ -20,22 +21,16 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  upload:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run build
       - uses: actions/upload-pages-artifact@v5
         with:
-          path: dist
+          path: site
 
   deploy:
-    needs: build
+    needs: upload
     runs-on: ubuntu-latest
     environment:
       name: github-pages
